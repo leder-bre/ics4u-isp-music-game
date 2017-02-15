@@ -60,6 +60,7 @@ If I get far in, to have the audio be read and a sequence automatically generate
 
 ### Make storyboards to indicate the user interface and/or functionality of your application.
 
+Pictures
 ![Start](https://github.com/rsgc-leder-b/ics4u-isp-music-game/blob/master/Music%20Game/IMG_0118.JPG)
 ![Select](https://github.com/rsgc-leder-b/ics4u-isp-music-game/blob/master/Music%20Game/IMG_0117.JPG)
 ![Themes](https://github.com/rsgc-leder-b/ics4u-isp-music-game/blob/master/Music%20Game/IMG_0115.JPG)
