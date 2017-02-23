@@ -10,21 +10,27 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-	let play = SKSpriteNode(imageNamed: "playButton")
+	let play = TouchNode(imageNamed: "playButton")
 	var transistion : SKTransition = SKTransition.fade(withDuration: 1)
+	//var testScene : SKScene = GameScene(size: CGSize(width: 2000, height: 2000))
+	//var splashScreen : SKScene = GameScene(size: CGSize(width: 2000, height: 2000))
 	override func update(_ currentTime: TimeInterval) {
-			//play.position = CGPoint(x: play.position.x+4, y: play.position.y)
 	}
 	
 	override func didMove(to view: SKView) {
+		var testScene : SKScene = GameScene(size: self.size)
+		var splashScreen : SKScene = GameScene(size: self.size)
+		testScene.size = self.size
+		splashScreen.size = self.size
 		backgroundColor = SKColor.black
-		let background = TouchNode(imageNamed: "splashBackground")
+		let background = SKSpriteNode(imageNamed: "splashBackground")
 		background.size = self.frame.size
 		background.position = CGPoint(x: size.width/2, y: size.height/2)
 		play.position = CGPoint(x: 1000, y: 1000)
 		play.isUserInteractionEnabled = true
-		addChild(background)
-		addChild(play)
-
+		splashScreen.addChild(background)
+		splashScreen.addChild(play)
+		//scene?.view?.presentScene(splashScreen)
+		//self.view?.presentScene(splashScreen)
 	}
 }
