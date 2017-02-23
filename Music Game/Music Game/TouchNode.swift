@@ -14,15 +14,17 @@ class TouchNode : SKSpriteNode {
     var transistion : SKTransition = SKTransition.fade(withDuration: 1)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Touched")
-        let splashScreen : SKScene = GameScene(size: (self.scene!.size))
-        let songScene : SKScene = SongList(size: (self.scene!.size))
+        let splashScreen : SKScene = GameScene(size: (self.scene!.frame.size))
+        let songScene : SKScene = SongList(size: (self.scene!.frame.size))
+        let settingScene : SKScene = Settings(size: self.scene!.frame.size)
         if scene?.name == "splashScreen" {
-            scene?.scene?.view?.presentScene(songScene)
-            print("Splash")
+            if self.name == "play" {
+                scene?.scene?.view?.presentScene(songScene)
+            } else if self.name == "setting" {
+                scene?.scene?.view?.presentScene(settingScene)
+            }
         } else {
             scene?.scene?.view?.presentScene(splashScreen)
-            print("Song")
         }
     }
 }
