@@ -18,6 +18,8 @@
 		C66D304D1E51F77A00DA8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66D304B1E51F77A00DA8BCC /* LaunchScreen.storyboard */; };
 		C66D30581E51F77A00DA8BCC /* Music_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D30571E51F77A00DA8BCC /* Music_GameTests.swift */; };
 		C66D30631E51F7F700DA8BCC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C66D30621E51F7F700DA8BCC /* README.md */; };
+		C680B6491E5F18FE00CE06EB /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B6481E5F18FE00CE06EB /* SongList.swift */; };
+		C680B64B1E5F5A8B00CE06EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64A1E5F5A8B00CE06EB /* Settings.swift */; };
 		C6AA49DC1E52C243000FB344 /* IMG_0114.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D71E52C243000FB344 /* IMG_0114.JPG */; };
 		C6AA49DD1E52C243000FB344 /* IMG_0115.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D81E52C243000FB344 /* IMG_0115.JPG */; };
 		C6AA49DE1E52C243000FB344 /* IMG_0116.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D91E52C243000FB344 /* IMG_0116.JPG */; };
@@ -51,6 +53,8 @@
 		C66D30571E51F77A00DA8BCC /* Music_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_GameTests.swift; sourceTree = "<group>"; };
 		C66D30591E51F77A00DA8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66D30621E51F7F700DA8BCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C680B6481E5F18FE00CE06EB /* SongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
+		C680B64A1E5F5A8B00CE06EB /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C6AA49D71E52C243000FB344 /* IMG_0114.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0114.JPG; sourceTree = "<group>"; };
 		C6AA49D81E52C243000FB344 /* IMG_0115.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0115.JPG; sourceTree = "<group>"; };
 		C6AA49D91E52C243000FB344 /* IMG_0116.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0116.JPG; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				C66D304B1E51F77A00DA8BCC /* LaunchScreen.storyboard */,
 				C66D304E1E51F77A00DA8BCC /* Info.plist */,
 				C62BDD6B1E5E924400859EF3 /* TouchNode.swift */,
+				C680B6481E5F18FE00CE06EB /* SongList.swift */,
+				C680B64A1E5F5A8B00CE06EB /* Settings.swift */,
 			);
 			path = "Music Game";
 			sourceTree = "<group>";
@@ -246,9 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C680B6491E5F18FE00CE06EB /* SongList.swift in Sources */,
 				C66D30431E51F77A00DA8BCC /* GameScene.swift in Sources */,
 				C62BDD6C1E5E924400859EF3 /* TouchNode.swift in Sources */,
 				C66D30451E51F77A00DA8BCC /* GameViewController.swift in Sources */,
+				C680B64B1E5F5A8B00CE06EB /* Settings.swift in Sources */,
 				C66D30631E51F7F700DA8BCC /* README.md in Sources */,
 				C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */,
 			);
