@@ -21,5 +21,9 @@ class SongList: SKScene {
         back.size = CGSize(width: self.size.width/8, height: self.size.width/16)
         back.isUserInteractionEnabled = true
         addChild(back)
+        let testCell = SongCell(imageNamed: "Rectangle")
+        testCell.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        testCell.setup()
+        addChild(testCell)
     }
 }
