@@ -35,6 +35,7 @@ My game is intended to be something that can be played quickly and is engaging f
 ### What is your inspiration for this project?
 
 *Have you seen another application that you wish to improve on? Has someone asked you to create this?*
+
 Back when I was about 10(?) years old me and my sister found the game Tap Tap Revenge, which was our favourite thing to play against each other. About a year or two ago I believe that the app was taken down from the store for lack of updates, and I wish to re-create it for nostalgic reasons.
 
 ### What is your prior experience in this area?
@@ -44,11 +45,14 @@ I have worked briefly with SpriteKit and have made apps for iOS.
 ### What are skills do you hope to acquire by completing this project?
 
 *For example, you might be writing a networked application for the first time. Or, you may be writing an application that requires a particularly well designed user interface. Describe what you expect to learn by writing this application.*
+
 I wish to learn the basics of SpriteKit and touch gesture recognition, as these appear to be key features to and graphics have iOS application.
 
 ### What dependencies, if any, will be required to complete your project?
 
 SpriteKit and some audio player.
+
+NOTE from Mr. Gordon: SpriteKit supports the playback of background audio and sound effects.
 
 ### Rate the personal difficulty level of this project.
 
