@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62BDD6C1E5E924400859EF3 /* TouchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62BDD6B1E5E924400859EF3 /* TouchNode.swift */; };
 		C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */; };
 		C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66D303E1E51F77A00DA8BCC /* GameScene.sks */; };
 		C66D30411E51F77A00DA8BCC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66D30401E51F77A00DA8BCC /* Actions.sks */; };
@@ -35,11 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C62BDD6B1E5E924400859EF3 /* TouchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchNode.swift; sourceTree = "<group>"; };
 		C66D30391E51F77900DA8BCC /* Music Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C66D303E1E51F77A00DA8BCC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C66D30401E51F77A00DA8BCC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		C66D30421E51F77A00DA8BCC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C66D30421E51F77A00DA8BCC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; usesTabs = 1; };
 		C66D30441E51F77A00DA8BCC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C66D30471E51F77A00DA8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C66D30491E51F77A00DA8BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C66D30491E51F77A00DA8BCC /* Assets.xcassets */,
 				C66D304B1E51F77A00DA8BCC /* LaunchScreen.storyboard */,
 				C66D304E1E51F77A00DA8BCC /* Info.plist */,
+				C62BDD6B1E5E924400859EF3 /* TouchNode.swift */,
 			);
 			path = "Music Game";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66D30431E51F77A00DA8BCC /* GameScene.swift in Sources */,
+				C62BDD6C1E5E924400859EF3 /* TouchNode.swift in Sources */,
 				C66D30451E51F77A00DA8BCC /* GameViewController.swift in Sources */,
 				C66D30631E51F7F700DA8BCC /* README.md in Sources */,
 				C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */,
