@@ -10,7 +10,10 @@ import SpriteKit
 import GameKit
 
 class SongCell : SKSpriteNode {
-    func setup() {
-        self.size = CGSize(width: (self.scene?.size.width)!, height: (self.scene?.size.height)!)
+    func setup(album : String,  song : String, artist : String) {
+        let albumArt = SKSpriteNode(imageNamed: album)
+        let songText = SKLabelNode(text: song)
+        let artistText = SKLabelNode(text: artist)
+        
     }
 }
