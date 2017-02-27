@@ -17,6 +17,7 @@ class TouchNode : SKSpriteNode {
         let splashScreen : SKScene = GameScene(size: (self.scene!.frame.size))
         let songScene : SKScene = SongList(size: (self.scene!.frame.size))
         let settingScene : SKScene = Settings(size: self.scene!.frame.size)
+        let playScene : SKScene = Play(size: self.scene!.frame.size)
         if scene?.name == "splashScreen" {
             if self.name == "play" {
                 scene?.scene?.view?.presentScene(songScene)
@@ -24,7 +25,11 @@ class TouchNode : SKSpriteNode {
                 scene?.scene?.view?.presentScene(settingScene)
             }
         } else {
-            scene?.scene?.view?.presentScene(splashScreen)
+            if self.name == "splash" {
+                scene?.scene?.view?.presentScene(splashScreen)
+            } else {
+                scene?.scene?.view?.presentScene(playScene)
+            }
         }
     }
 }

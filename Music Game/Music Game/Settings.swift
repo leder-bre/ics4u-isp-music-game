@@ -20,6 +20,7 @@ class Settings: SKScene {
         back.position = CGPoint(x: self.size.width/16, y: self.size.height-self.size.width/32)
         back.size = CGSize(width: self.size.width/8, height: self.size.width/16)
         back.isUserInteractionEnabled = true
+        back.name = "splash"
         addChild(back)
     }
 }

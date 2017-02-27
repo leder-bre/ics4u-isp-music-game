@@ -26,6 +26,7 @@ class SongList: SKScene {
         back.size = CGSize(width: self.size.width/8, height: self.size.width/16)
         back.isUserInteractionEnabled = true
         back.zPosition = 2
+        back.name = "splash"
         addChild(back)
         
         var testCellArray = [SongCell]()
@@ -38,7 +39,7 @@ class SongList: SKScene {
             testCellArray.append(testCell)
             addChild(testCell)
             let testCellButton = TouchNode(imageNamed: "playButton")
-            testCellButton.position = CGPoint(x: 4*self.size.width/5, y: CGFloat(i)*self.size.height/6-self.size.height/12)
+            testCellButton.position = CGPoint(x:6*self.size.width/7, y: CGFloat(i)*self.size.height/6-self.size.height/12)
             testCellButton.size = CGSize(width: self.size.width/8, height: self.size.width/16)
             testCellButton.isUserInteractionEnabled = true
             testCellButton.zPosition = 2
