@@ -10,26 +10,49 @@ import Foundation
 import SpriteKit
 
 class TouchNode : SKSpriteNode {
-    
-    var transistion : SKTransition = SKTransition.fade(withDuration: 1)
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let splashScreen : SKScene = GameScene(size: (self.scene!.frame.size))
-        let songScene : SKScene = SongList(size: (self.scene!.frame.size))
-        let settingScene : SKScene = Settings(size: self.scene!.frame.size)
-        let playScene : SKScene = Play(size: self.scene!.frame.size)
-        if scene?.name == "splashScreen" {
-            if self.name == "play" {
-                scene?.scene?.view?.presentScene(songScene)
-            } else if self.name == "setting" {
-                scene?.scene?.view?.presentScene(settingScene)
-            }
-        } else {
-            if self.name == "splash" {
-                scene?.scene?.view?.presentScene(splashScreen)
-            } else {
-                scene?.scene?.view?.presentScene(playScene)
-            }
-        }
-    }
+	
+	var transistion : SKTransition = SKTransition.fade(withDuration: 1)
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		let splashScreen : SKScene = GameScene(size: (self.scene!.frame.size))
+		let songScene : SKScene = SongList(size: (self.scene!.frame.size))
+		let settingScene : SKScene = Settings(size: self.scene!.frame.size)
+		let playScene : SKScene = Play(size: self.scene!.frame.size)
+		guard let theName = self.name else {
+			return
+		}
+		switch theName {
+		case "play":
+			scene?.scene?.view?.presentScene(songScene)
+			break
+		case "setting":
+			scene?.scene?.view?.presentScene(settingScene)
+			break
+		case "splash":
+			scene?.scene?.view?.presentScene(splashScreen)
+			break
+		case "gameButton":
+			scene?.scene?.view?.presentScene(playScene)
+			break
+		case "pause":
+			scene?.scene?.view?.presentScene(songScene)
+			break
+		default:
+			break
+		}
+		/*
+		if scene?.name == "splashScreen" {
+		if self.name == "play" {
+		scene?.scene?.view?.presentScene(songScene)
+		} else if self.name == "setting" {
+		scene?.scene?.view?.presentScene(settingScene)
+		}
+		} else {
+		if self.name == "splash" {
+		scene?.scene?.view?.presentScene(splashScreen)
+		} else {
+		scene?.scene?.view?.presentScene(playScene)
+		}
+		}*/
+	}
 }

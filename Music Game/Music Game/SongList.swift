@@ -43,7 +43,7 @@ class SongList: SKScene {
             testCellButton.size = CGSize(width: self.size.width/8, height: self.size.width/16)
             testCellButton.isUserInteractionEnabled = true
             testCellButton.zPosition = 2
-            testCellButton.name = "ITSaBUTTONforTESTINGwhyISthisDUEmonday"
+            testCellButton.name = "gameButton"
             addChild(testCellButton)
         }
     }

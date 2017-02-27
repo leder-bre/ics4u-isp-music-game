@@ -16,10 +16,12 @@ class Play : SKScene {
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         addChild(background)
 
-        let pauseButton = TouchNode(imageNamed: "pause")
+        let pauseButton = TouchNode(imageNamed: "pauseButton")
         pauseButton.size = CGSize(width: self.size.width/8, height: self.size.width/16)
         pauseButton.position = CGPoint(x: self.size.width/16, y: self.size.height-self.size.width/32)
         pauseButton.isUserInteractionEnabled = true
+        pauseButton.zPosition = 1
+        pauseButton.name = "pause"
         addChild(pauseButton)
     }
 }
