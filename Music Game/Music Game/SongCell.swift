@@ -19,5 +19,15 @@ class SongCell : SKSpriteNode {
         albumArt.size = CGSize(width: 3*self.size.height/2, height: 3*self.size.height/4)
         albumArt.zPosition = 1
         addChild(albumArt)
+        
+        songText.position = CGPoint(x: self.size.width/10, y: 0)
+        songText.fontSize = 120
+        songText.zPosition = 1
+        addChild(songText)
+        
+        artistText.position = CGPoint(x: self.size.width/10, y: -self.size.height/3)
+        artistText.fontSize = 120
+        artistText.zPosition = 1
+        addChild(artistText)
     }
 }
