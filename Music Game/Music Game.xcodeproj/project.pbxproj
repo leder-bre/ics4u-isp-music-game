@@ -18,6 +18,7 @@
 		C66D304D1E51F77A00DA8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66D304B1E51F77A00DA8BCC /* LaunchScreen.storyboard */; };
 		C66D30581E51F77A00DA8BCC /* Music_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D30571E51F77A00DA8BCC /* Music_GameTests.swift */; };
 		C66D30631E51F7F700DA8BCC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C66D30621E51F7F700DA8BCC /* README.md */; };
+		C67713A21E674EF400101FB4 /* NoteSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67713A11E674EF400101FB4 /* NoteSpawner.swift */; };
 		C680B6491E5F18FE00CE06EB /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B6481E5F18FE00CE06EB /* SongList.swift */; };
 		C680B64B1E5F5A8B00CE06EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64A1E5F5A8B00CE06EB /* Settings.swift */; };
 		C680B64D1E5F6D8C00CE06EB /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64C1E5F6D8C00CE06EB /* Splash.swift */; };
@@ -56,6 +57,7 @@
 		C66D30571E51F77A00DA8BCC /* Music_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_GameTests.swift; sourceTree = "<group>"; };
 		C66D30591E51F77A00DA8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66D30621E51F7F700DA8BCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C67713A11E674EF400101FB4 /* NoteSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSpawner.swift; sourceTree = "<group>"; };
 		C680B6481E5F18FE00CE06EB /* SongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
 		C680B64A1E5F5A8B00CE06EB /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C680B64C1E5F6D8C00CE06EB /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				C680B64C1E5F6D8C00CE06EB /* Splash.swift */,
 				C680B64F1E5F70A100CE06EB /* SongCell.swift */,
 				C6F9296A1E63D619002C4D04 /* Play.swift */,
+				C67713A11E674EF400101FB4 /* NoteSpawner.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				C66D30451E51F77A00DA8BCC /* GameViewController.swift in Sources */,
 				C680B64B1E5F5A8B00CE06EB /* Settings.swift in Sources */,
 				C680B64D1E5F6D8C00CE06EB /* Splash.swift in Sources */,
+				C67713A21E674EF400101FB4 /* NoteSpawner.swift in Sources */,
 				C66D30631E51F7F700DA8BCC /* README.md in Sources */,
 				C680B6501E5F70A100CE06EB /* SongCell.swift in Sources */,
 				C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */,

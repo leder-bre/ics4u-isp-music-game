@@ -17,7 +17,6 @@ class SongList: SKScene {
     let songs = [String]()
     let artist = [String]()
     override func update(_ currentTime: TimeInterval) {
-        childNode(withName: "tableCell[0]")?.childNode(withName: "title")?.position.y += 2
     }
     
     override func didMove(to view: SKView) {
@@ -34,7 +33,8 @@ class SongList: SKScene {
             let testCell = SongCell(imageNamed: "Rectangle")
             testCell.size = CGSize(width: self.size.width, height: self.size.height/6)
             testCell.position = CGPoint(x: self.size.width/2, y: CGFloat(i)*self.size.height/6-self.size.height/12)
-            testCell.name = "tableCell[\(i-1)]"
+            testCell.name = "tableCell\(i-1)"
+            print(testCell.name)
             testCell.setup(album: "AnimalNeonTrees", song: "Animal", artist: "Neon Trees")
             testCellArray.append(testCell)
             addChild(testCell)
@@ -44,6 +44,7 @@ class SongList: SKScene {
             testCellButton.isUserInteractionEnabled = true
             testCellButton.zPosition = 2
             testCellButton.name = "gameButton"
+            print(testCellButton.name)
             addChild(testCellButton)
         }
     }
