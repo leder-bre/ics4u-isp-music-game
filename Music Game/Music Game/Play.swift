@@ -17,6 +17,10 @@ class Play : SKScene {
         if (time == 60) {
             time = 0
             score.midDot()
+        } else if (time == 20) {
+            score.rightDot()
+        } else if (time == 40) {
+            score.leftDot()
         }
         score.update()
     }
