@@ -10,7 +10,16 @@ import SpriteKit
 import GameplayKit
 
 class Play : SKScene {
-    //override func update(
+    let score = NoteSpawner(text: "Score: 0")
+    var time = 0
+    override func update(_ currentTime: TimeInterval) {
+        time += 1
+        if (time == 60) {
+            time = 0
+            score.midDot()
+        }
+        score.update()
+    }
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "gameBackground")
         background.size = self.frame.size
@@ -24,8 +33,6 @@ class Play : SKScene {
         pauseButton.zPosition = 1
         pauseButton.name = "pause"
         addChild(pauseButton)
-        
-        let score = SKLabelNode(text: "Score: 0")
         score.position = CGPoint(x: self.size.width/2, y: 19*self.size.height/20)
         score.fontSize = 80
         score.zPosition = 1
