@@ -20,20 +20,16 @@ class NoteSpawner : SKLabelNode {
         if midCount > 0 {
             for i in (midMax-midCount)..<midMax {
                 childNode(withName: "green\(i)")?.position.y -= 10
-                print("green\(i)")
-                if i == 0 {
-                    print(childNode(withName: "green\(i)")?.position.y)
-                }
             }
         }
         if rightCount > 0 {
             for i in (rightMax-rightCount)..<rightMax {
-                childNode(withName: "blue\(i)")?.position.y -= 2
+                childNode(withName: "blue\(i)")?.position.y -= 10
             }
         }
         if leftCount > 0 {
             for i in (leftMax-leftCount)..<leftMax {
-                childNode(withName: "red\(i)")?.position.y -= 2
+                childNode(withName: "red\(i)")?.position.y -= 10
             }
         }
     }
@@ -62,10 +58,9 @@ class NoteSpawner : SKLabelNode {
         green.name = "green\(midMax)"
         green.isUserInteractionEnabled = true
         green.size = CGSize(width: 80, height: 40)
-        green.position = CGPoint(x: 0, y: green.size.height*2)// + green.size.height)*/
+        green.position = CGPoint(x: 0, y: green.size.height*2)
         midCount += 1
         midMax += 1
-        print(green.name)
         addChild(green)
     }
 }

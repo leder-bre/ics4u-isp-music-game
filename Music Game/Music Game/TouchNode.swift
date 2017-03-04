@@ -38,6 +38,9 @@ class TouchNode : SKSpriteNode {
 			scene?.scene?.view?.presentScene(songScene)
 			break
 		default:
+			//if theName.substring(to: <#T##String.Index#>) {
+				
+			//}
 			break
 		}
 		/*
