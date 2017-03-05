@@ -39,7 +39,13 @@ class TouchNode : SKSpriteNode {
 			break
 		default:
 			let name = theName.substring(to: theName.index(theName.startIndex, offsetBy: 3))
-			
+			if (name == "red" || name == "gre" || name == "blu") {
+				self.removeFromParent()
+				let score : SKNode = SKLabelNode(text: name)
+				score.alpha = 0
+				score.name = "score"
+				self.parent?.addChild(score)
+			}
 			break
 		}
 		/*

@@ -17,30 +17,53 @@ class NoteSpawner : SKLabelNode {
 	var midCount = 0
 	var midMax = 0
 	func update() {
+		let scoreNode = childNode(withName: "score") as? SKLabelNode
+		if let scoreText = scoreNode?.text {
+			switch scoreText {
+			case "red":
+				childNode(withName: "red\(leftMax-leftCount)")?.removeFromParent()
+				break
+			case "blu":
+				childNode(withName: "blue\(rightMax-rightCount)")?.removeFromParent()
+				break
+			case "gre":
+				childNode(withName: "green\(midMax-midCount)")?.removeFromParent()
+				break
+			default:
+				break
+			}
+		}
+		//	childNode(withName: "score")?.removeFromParent()
 		if midCount > 0 {
 			for i in (midMax-midCount)..<midMax {
 				childNode(withName: "green\(i)")?.position.y -= 10
-				if ((Int)((childNode(withName: "green\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
-					childNode(withName: "green\(i)")?.removeFromParent()
-					midCount-=1
+				if let childBlue = childNode(withName: "blue\(i)") {
+					if ((Int)((childNode(withName: "green\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
+						childNode(withName: "green\(i)")?.removeFromParent()
+						midCount-=1
+					}
 				}
 			}
 		}
 		if rightCount > 0 {
 			for i in (rightMax-rightCount)..<rightMax {
 				childNode(withName: "blue\(i)")?.position.y -= 10
-				if ((Int)((childNode(withName: "blue\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
-					childNode(withName: "blue\(i)")?.removeFromParent()
-					rightCount-=1
+				if let childBlue = childNode(withName: "blue\(i)") {
+					if ((Int)((childNode(withName: "blue\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
+						childNode(withName: "blue\(i)")?.removeFromParent()
+						rightCount-=1
+					}
 				}
 			}
 		}
 		if leftCount > 0 {
 			for i in (leftMax-leftCount)..<leftMax {
 				childNode(withName: "red\(i)")?.position.y -= 10
-				if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
-					childNode(withName: "red\(i)")?.removeFromParent()
-					leftCount-=1
+				if let childBlue = childNode(withName: "blue\(i)") {
+					if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
+						childNode(withName: "red\(i)")?.removeFromParent()
+						leftCount-=1
+					}
 				}
 			}
 		}
