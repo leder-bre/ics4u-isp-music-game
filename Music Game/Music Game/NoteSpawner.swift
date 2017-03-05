@@ -33,11 +33,11 @@ class NoteSpawner : SKLabelNode {
 				break
 			}
 		}
-		//	childNode(withName: "score")?.removeFromParent()
+		childNode(withName: "score")?.removeFromParent()
 		if midCount > 0 {
 			for i in (midMax-midCount)..<midMax {
 				childNode(withName: "green\(i)")?.position.y -= 10
-				if let childBlue = childNode(withName: "blue\(i)") {
+				if let childBlue = childNode(withName: "green\(i)") {
 					if ((Int)((childNode(withName: "green\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
 						childNode(withName: "green\(i)")?.removeFromParent()
 						midCount-=1
@@ -59,7 +59,7 @@ class NoteSpawner : SKLabelNode {
 		if leftCount > 0 {
 			for i in (leftMax-leftCount)..<leftMax {
 				childNode(withName: "red\(i)")?.position.y -= 10
-				if let childBlue = childNode(withName: "blue\(i)") {
+				if let childBlue = childNode(withName: "red\(i)") {
 					if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
 						childNode(withName: "red\(i)")?.removeFromParent()
 						leftCount-=1
