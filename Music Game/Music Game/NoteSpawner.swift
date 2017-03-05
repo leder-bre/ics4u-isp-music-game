@@ -37,7 +37,7 @@ class NoteSpawner : SKLabelNode {
 		if midCount > 0 {
 			for i in (midMax-midCount)..<midMax {
 				childNode(withName: "green\(i)")?.position.y -= 10
-				if let childBlue = childNode(withName: "green\(i)") {
+				if childNode(withName: "green\(i)") != nil {
 					if ((Int)((childNode(withName: "green\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
 						childNode(withName: "green\(i)")?.removeFromParent()
 						midCount-=1
@@ -48,7 +48,7 @@ class NoteSpawner : SKLabelNode {
 		if rightCount > 0 {
 			for i in (rightMax-rightCount)..<rightMax {
 				childNode(withName: "blue\(i)")?.position.y -= 10
-				if let childBlue = childNode(withName: "blue\(i)") {
+				if childNode(withName: "blue\(i)") != nil {
 					if ((Int)((childNode(withName: "blue\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
 						childNode(withName: "blue\(i)")?.removeFromParent()
 						rightCount-=1
@@ -59,7 +59,7 @@ class NoteSpawner : SKLabelNode {
 		if leftCount > 0 {
 			for i in (leftMax-leftCount)..<leftMax {
 				childNode(withName: "red\(i)")?.position.y -= 10
-				if let childBlue = childNode(withName: "red\(i)") {
+				if childNode(withName: "red\(i)") != nil {
 					if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(3*(scene?.size.height)!/4)) {
 						childNode(withName: "red\(i)")?.removeFromParent()
 						leftCount-=1
