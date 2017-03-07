@@ -16,22 +16,28 @@ class NoteSpawner : SKLabelNode {
 	var rightMax = 0
 	var midCount = 0
 	var midMax = 0
+	var score = 0
 	func update() {
 		let scoreNode = childNode(withName: "score") as? SKLabelNode
 		if let scoreText = scoreNode?.text {
 			switch scoreText {
 			case "red":
 				childNode(withName: "red\(leftMax-leftCount)")?.removeFromParent()
+				leftCount -= 1
 				break
 			case "blu":
 				childNode(withName: "blue\(rightMax-rightCount)")?.removeFromParent()
+				rightCount -= 1
 				break
 			case "gre":
 				childNode(withName: "green\(midMax-midCount)")?.removeFromParent()
+				midCount -= 1
 				break
 			default:
 				break
 			}
+			score += 10
+			self.text = "Score: \(score)"
 		}
 		childNode(withName: "score")?.removeFromParent()
 		if midCount > 0 {
@@ -60,7 +66,8 @@ class NoteSpawner : SKLabelNode {
 			for i in (leftMax-leftCount)..<leftMax {
 				childNode(withName: "red\(i)")?.position.y -= 10
 				if childNode(withName: "red\(i)") != nil {
-					if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(4*(scene?.size.height)!/5)) {
+					if ((Int)((childNode(withName: "red\(i)")?.position.y)!) < -(Int)(4*(scene?.size.height)!/5
+						)) {
 						childNode(withName: "red\(i)")?.removeFromParent()
 						leftCount-=1
 					}

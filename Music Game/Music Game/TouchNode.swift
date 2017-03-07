@@ -35,18 +35,35 @@ class TouchNode : SKSpriteNode {
 			scene?.scene?.view?.presentScene(playScene)
 			break
 		case "pause":
-			scene?.scene?.view?.presentScene(songScene)
+			let pauseScreen = TouchNode(imageNamed: "black")
+			pauseScreen.size = CGSize(width: (scene?.size.width)!, height: (scene?.size.height)!)
+			pauseScreen.position = CGPoint(x: (scene?.size.width)!/2, y: (scene?.size.height)!/2)
+			pauseScreen.zPosition = 2
+			pauseScreen.isUserInteractionEnabled = true
+			pauseScreen.name = "pauseScreen"
+			parent?.addChild(pauseScreen)
+			// Back Button
+			let backButton = TouchNode(imageNamed: "backButton")
+			backButton.size = CGSize(width: (scene?.size.width)!/4, height: (scene?.size.width)!/8)
+			backButton.isUserInteractionEnabled = true
+			backButton.position = CGPoint(x: (scene?.size.width)!/2, y: (scene?.size.height)!/2)
+			backButton.zPosition = 3
+			backButton.name = "play"
+			parent?.addChild(backButton)
+			break
+		case "pauseScreen":
+			parent?.childNode(withName: "play")?.removeFromParent()
+			self.removeFromParent()
 			break
 		default:
 			let name = theName.substring(to: theName.index(theName.startIndex, offsetBy: 3))
 			if (name == "red" || name == "gre" || name == "blu") {
-				let positionY = self.position.y
-				if self.position.y < -1040 {
-					self.removeFromParent()
+				if self.position.y < -1000 {
 					let score : SKNode = SKLabelNode(text: name)
 					score.alpha = 0
 					score.name = "score"
 					self.parent?.addChild(score)
+					//self.removeFromParent()
 				}
 			}
 			break
