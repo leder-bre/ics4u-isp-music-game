@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class Play : SKScene {
-    let score = NoteSpawner(text: "Score: 0")
+    let score = NoteSpawner(text: "Score")
     var time = 0
     override func update(_ currentTime: TimeInterval) {
         let pauseScreen = childNode(withName: "pauseScreen")
