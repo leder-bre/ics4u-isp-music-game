@@ -44,5 +44,6 @@ class Play : SKScene {
         score.fontSize = 80
         score.zPosition = 1
         addChild(score)
+        score.run(SKAction.playSoundFileNamed("Animal.mp3", waitForCompletion: false))
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C62BDD6C1E5E924400859EF3 /* TouchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62BDD6B1E5E924400859EF3 /* TouchNode.swift */; };
+		C65E88331E89C1E5008E27C2 /* Animal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C65E88321E89C1E5008E27C2 /* Animal.mp3 */; };
 		C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */; };
 		C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66D303E1E51F77A00DA8BCC /* GameScene.sks */; };
 		C66D30411E51F77A00DA8BCC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66D30401E51F77A00DA8BCC /* Actions.sks */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		C62BDD6B1E5E924400859EF3 /* TouchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchNode.swift; sourceTree = "<group>"; usesTabs = 1; };
+		C65E88321E89C1E5008E27C2 /* Animal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Animal.mp3; sourceTree = "<group>"; };
 		C66D30391E51F77900DA8BCC /* Music Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C66D303E1E51F77A00DA8BCC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				C680B64E1E5F703A00CE06EB /* Nodes */,
 				C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */,
+				C65E88321E89C1E5008E27C2 /* Animal.mp3 */,
 				C66D303E1E51F77A00DA8BCC /* GameScene.sks */,
 				C66D30401E51F77A00DA8BCC /* Actions.sks */,
 				C66D30441E51F77A00DA8BCC /* GameViewController.swift */,
@@ -247,6 +250,7 @@
 			files = (
 				C6AA49DF1E52C243000FB344 /* IMG_0117.JPG in Resources */,
 				C66D30481E51F77A00DA8BCC /* Main.storyboard in Resources */,
+				C65E88331E89C1E5008E27C2 /* Animal.mp3 in Resources */,
 				C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */,
 				C6AA49E01E52C243000FB344 /* IMG_0118.JPG in Resources */,
 				C66D304A1E51F77A00DA8BCC /* Assets.xcassets in Resources */,

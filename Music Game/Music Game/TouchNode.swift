@@ -41,6 +41,7 @@ class TouchNode : SKSpriteNode {
 			pauseScreen.zPosition = 2
 			pauseScreen.isUserInteractionEnabled = true
 			pauseScreen.name = "pauseScreen"
+			parent?.run(SKAction.pause())
 			parent?.addChild(pauseScreen)
 			// Back Button
 			let backButton = TouchNode(imageNamed: "backButton")
