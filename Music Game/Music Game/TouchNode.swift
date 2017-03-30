@@ -24,15 +24,19 @@ class TouchNode : SKSpriteNode {
 		switch theName {
 		case "play":
 			scene?.scene?.view?.presentScene(songScene)
+			self.scene?.removeAllChildren()
 			break
 		case "setting":
 			scene?.scene?.view?.presentScene(settingScene)
+			self.scene?.removeAllChildren()
 			break
 		case "splash":
 			scene?.scene?.view?.presentScene(splashScreen)
+			self.scene?.removeAllChildren()
 			break
 		case "gameButton":
 			scene?.scene?.view?.presentScene(playScene)
+			self.scene?.removeAllChildren()
 			break
 		case "pause":
 			let pauseScreen = TouchNode(imageNamed: "black")
@@ -41,8 +45,11 @@ class TouchNode : SKSpriteNode {
 			pauseScreen.zPosition = 2
 			pauseScreen.isUserInteractionEnabled = true
 			pauseScreen.name = "pauseScreen"
-			parent?.run(SKAction.pause())
+			//parent?.childNode(withName: "music")?.removeFromParent()
 			parent?.addChild(pauseScreen)
+			if let parentTest : Play = parent as? Play {
+				parentTest.pause()
+			}
 			// Back Button
 			let backButton = TouchNode(imageNamed: "backButton")
 			backButton.size = CGSize(width: (scene?.size.width)!/4, height: (scene?.size.width)!/8)
@@ -54,6 +61,10 @@ class TouchNode : SKSpriteNode {
 			break
 		case "pauseScreen":
 			parent?.childNode(withName: "play")?.removeFromParent()
+			if let parentTest : Play = parent as? Play {
+				parentTest.play()
+				parentTest.makeUpdate()
+			}
 			self.removeFromParent()
 			break
 		default:
