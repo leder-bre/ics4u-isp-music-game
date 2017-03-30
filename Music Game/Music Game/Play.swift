@@ -15,12 +15,14 @@ class Play : SKScene {
 	var initialTime : Double = 0
 	var prePauseTime : Double = 0
 	var shouldUpdate = false
+	var shouldResetTime = true
 	var changePre = true
 	var musicPlayer : AVAudioPlayer = AVAudioPlayer()
 	let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Animal.mp3", ofType: nil)!)
 	var time = 0
 	override func update(_ currentTime: TimeInterval) {
-		if initialTime == 0 {
+		if shouldResetTime {
+			shouldResetTime = false
 			initialTime = currentTime
 		}
 		if shouldUpdate {
@@ -33,13 +35,19 @@ class Play : SKScene {
 		print(currentTime - initialTime)
 		if pauseScreen?.name != "pauseScreen" {
 			time += 1
-			if (time == 60) {
-				time = 0
-				score.midDot()
-			} else if (time == 20) {
+			switch time {
+			case 20:
 				score.rightDot()
-			} else if (time == 40) {
+				break
+			case 40:
+				score.midDot()
+				break
+			case 60:
+				time = 0
 				score.leftDot()
+				break
+			default:
+				break
 			}
 			score.update()
 		} else {
@@ -47,6 +55,17 @@ class Play : SKScene {
 				changePre = false
 				prePauseTime = currentTime - initialTime
 			}
+		}
+	}
+	func resetTime() {
+		shouldResetTime = true
+	}
+	func stop() {
+		musicPlayer.stop()
+		do {
+			try musicPlayer = AVAudioPlayer(contentsOf: url)
+		} catch let err as NSError{
+			print(err.debugDescription)
 		}
 	}
 	func play() {
@@ -81,8 +100,5 @@ class Play : SKScene {
 		} catch let err as NSError{
 			print(err.debugDescription)
 		}
-		//musicPlayer.name = "music"
-		//addChild(musicPlayer)
-		//musicPlayer.run(SKAction.playSoundFileNamed("Animal.mp3", waitForCompletion: false))
 	}
 }

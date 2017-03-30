@@ -58,12 +58,31 @@ class TouchNode : SKSpriteNode {
 			backButton.zPosition = 3
 			backButton.name = "play"
 			parent?.addChild(backButton)
+			// Record Button
+			let record = TouchNode(imageNamed: "player_record")
+			record.size = CGSize(width: (scene?.size.width)!/4, height: (scene?.size.width)!/8)
+			record.isUserInteractionEnabled = true
+			record.position = CGPoint(x: (scene?.size.width)!/2, y: 3*(scene?.size.height)!/4)
+			record.zPosition = 3
+			record.name = "record"
+			parent?.addChild(record)
 			break
 		case "pauseScreen":
 			parent?.childNode(withName: "play")?.removeFromParent()
+			parent?.childNode(withName: "record")?.removeFromParent()
 			if let parentTest : Play = parent as? Play {
 				parentTest.play()
 				parentTest.makeUpdate()
+			}
+			self.removeFromParent()
+			break
+		case "record":
+			parent?.childNode(withName: "play")?.removeFromParent()
+			parent?.childNode(withName: "pauseScreen")?.removeFromParent()
+			if let parentTest : Play = parent as? Play {
+				parentTest.stop()
+				parentTest.play()
+				parentTest.resetTime()
 			}
 			self.removeFromParent()
 			break
