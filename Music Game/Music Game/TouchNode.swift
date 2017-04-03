@@ -45,7 +45,6 @@ class TouchNode : SKSpriteNode {
 			pauseScreen.zPosition = 2
 			pauseScreen.isUserInteractionEnabled = true
 			pauseScreen.name = "pauseScreen"
-			//parent?.childNode(withName: "music")?.removeFromParent()
 			parent?.addChild(pauseScreen)
 			if let parentTest : Play = parent as? Play {
 				parentTest.pause()
@@ -83,8 +82,24 @@ class TouchNode : SKSpriteNode {
 				parentTest.stop()
 				parentTest.play()
 				parentTest.resetTime()
+				parentTest.startRecording()
 			}
 			self.removeFromParent()
+			break
+		case "recordButton0":
+			if let parentTest : Play = parent as? Play {
+				parentTest.addLeftPoint()
+			}
+			break
+		case "recordButton1":
+			if let parentTest : Play = parent as? Play {
+				parentTest.addRightPoint()
+			}
+			break
+		case "recordButton2":
+			if let parentTest : Play = parent as? Play {
+				parentTest.addMidPoint()
+			}
 			break
 		default:
 			let name = theName.substring(to: theName.index(theName.startIndex, offsetBy: 3))
@@ -99,19 +114,5 @@ class TouchNode : SKSpriteNode {
 			}
 			break
 		}
-		/*
-		if scene?.name == "splashScreen" {
-		if self.name == "play" {
-		scene?.scene?.view?.presentScene(songScene)
-		} else if self.name == "setting" {
-		scene?.scene?.view?.presentScene(settingScene)
-		}
-		} else {
-		if self.name == "splash" {
-		scene?.scene?.view?.presentScene(splashScreen)
-		} else {
-		scene?.scene?.view?.presentScene(playScene)
-		}
-		}*/
 	}
 }
