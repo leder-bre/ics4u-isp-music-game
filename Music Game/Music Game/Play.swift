@@ -217,7 +217,22 @@ class Play : SKScene {
 			let path = dir.appendingPathComponent(file)
 			do {
 				let text2 = try String(contentsOf: path, encoding: String.Encoding.utf8)
-				print(text2)
+				print(text2.components(separatedBy: ":"))
+				if text2.components(separatedBy: ":")[0].components(separatedBy: ",").count != 0 {
+					for i in 0...text2.components(separatedBy: ":")[0].components(separatedBy: ",").count-1 {
+						recordedLeft.append(Float(text2.components(separatedBy: ":")[0].components(separatedBy: ",")[i])!)
+					}
+				}
+				if text2.components(separatedBy: ":")[1].components(separatedBy: ",").count != 0 {
+					for i in 0...text2.components(separatedBy: ":")[1].components(separatedBy: ",").count-1 {
+						recordedMid.append(Float(text2.components(separatedBy: ":")[1].components(separatedBy: ",")[i])!)
+					}
+				}
+				if text2.components(separatedBy: ":")[2].components(separatedBy: ",").count != 0 {
+					for i in 0...text2.components(separatedBy: ":")[2].components(separatedBy: ",").count-1 {
+						recordedRight.append(Float(text2.components(separatedBy: ":")[2].components(separatedBy: ",")[i])!)
+					}
+				}
 			} catch let err as NSError {
 				print(err.debugDescription)
 			}
