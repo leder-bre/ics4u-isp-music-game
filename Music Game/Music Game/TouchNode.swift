@@ -70,8 +70,8 @@ class TouchNode : SKSpriteNode {
 			parent?.childNode(withName: "play")?.removeFromParent()
 			parent?.childNode(withName: "record")?.removeFromParent()
 			if let parentTest : Play = parent as? Play {
-				parentTest.play()
-				parentTest.makeUpdate()
+				parentTest.hasStartedPlaying = false
+				parentTest.shouldUpdate = true
 			}
 			self.removeFromParent()
 			break
@@ -80,36 +80,35 @@ class TouchNode : SKSpriteNode {
 			parent?.childNode(withName: "pauseScreen")?.removeFromParent()
 			if let parentTest : Play = parent as? Play {
 				parentTest.stop()
-				parentTest.play()
-				parentTest.resetTime()
+				parentTest.removeScoreNodes()
+				parentTest.shouldResetTime = true
 				parentTest.startRecording()
 			}
 			self.removeFromParent()
 			break
 		case "recordButton0":
 			if let parentTest : Play = parent as? Play {
-				parentTest.addLeftPoint()
+				parentTest.addLeft = true
 			}
 			break
 		case "recordButton1":
 			if let parentTest : Play = parent as? Play {
-				parentTest.addRightPoint()
+				parentTest.addRight = true
 			}
 			break
 		case "recordButton2":
 			if let parentTest : Play = parent as? Play {
-				parentTest.addMidPoint()
+				parentTest.addMid = true
 			}
 			break
 		default:
 			let name = theName.substring(to: theName.index(theName.startIndex, offsetBy: 3))
 			if (name == "red" || name == "gre" || name == "blu") {
-				if self.position.y < -1000 {
+				if self.position.y < -950 {
 					let score : SKNode = SKLabelNode(text: name)
 					score.alpha = 0
 					score.name = "score"
 					self.parent?.addChild(score)
-					//self.removeFromParent()
 				}
 			}
 			break
