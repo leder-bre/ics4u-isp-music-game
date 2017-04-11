@@ -28,15 +28,19 @@ class Play : SKScene {
 	var recordedLeft = [Float]()
 	var recordedRight = [Float]()
 	var musicPlayer : AVAudioPlayer = AVAudioPlayer()
-    var hasStartedPlaying = false
+	var hasStartedPlaying = false
 	let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Animal.mp3", ofType: nil)!)
 	var time = 0
 	let file = "Animal.txt"
+	/*required init?(coder aDecoder: NSCoder) {
+	
+	fatalError("init(coder:) has not been implemented")
+	}*/
 	override func update(_ currentTime: TimeInterval) {
 		if shouldResetTime {
 			shouldResetTime = false
 			initialTime = currentTime
-            score.midDot()
+			score.midDot()
 		}
 		if shouldUpdate {
 			shouldUpdate = false
@@ -59,12 +63,12 @@ class Play : SKScene {
 					recordedRight.append(Float(currentTime)-Float(initialTime))
 				}
 			} else {
-                if !hasStartedPlaying {
-                    if currentTime-initialTime > 7.56 {
-                        hasStartedPlaying = true
-                        musicPlayer.play()
-                    }
-                }
+				if !hasStartedPlaying {
+					if currentTime-initialTime > 7.56 {
+						hasStartedPlaying = true
+						musicPlayer.play()
+					}
+				}
 				var looping = true
 				while looping {
 					looping = false
@@ -99,57 +103,57 @@ class Play : SKScene {
 			}
 		}
 	}
-    func clearSequences() {
-        recordedMid = []
-        recordedLeft = []
-        recordedRight = []
-    }
+	func clearSequences() {
+		recordedMid = []
+		recordedLeft = []
+		recordedRight = []
+	}
 	func sequenceString() -> String {
 		var stringseq = ""
 		if recordedLeft.count > 0 {
 			for i in 0...recordedLeft.count-1 {
 				stringseq += "\(recordedLeft[i])"
-                stringseq += i == recordedLeft.count-1 ? "" : ","
+				stringseq += i == recordedLeft.count-1 ? "" : ","
 			}
 		}
-        stringseq += ":"
-        if recordedMid.count > 0 {
-            for i in 0...recordedMid.count-1 {
-                stringseq += "\(recordedMid[i])"
-                stringseq += i == recordedMid.count-1 ? "" : ","
-            }
-        }
-        stringseq += ":"
-        if recordedRight.count > 0 {
-            for i in 0...recordedRight.count-1 {
-                stringseq += "\(recordedRight[i])"
-                stringseq += i == recordedRight.count-1 ? "" : ","
-            }
-        }
-        print(stringseq)
-        return stringseq
+		stringseq += ":"
+		if recordedMid.count > 0 {
+			for i in 0...recordedMid.count-1 {
+				stringseq += "\(recordedMid[i])"
+				stringseq += i == recordedMid.count-1 ? "" : ","
+			}
+		}
+		stringseq += ":"
+		if recordedRight.count > 0 {
+			for i in 0...recordedRight.count-1 {
+				stringseq += "\(recordedRight[i])"
+				stringseq += i == recordedRight.count-1 ? "" : ","
+			}
+		}
+		print(stringseq)
+		return stringseq
 	}
-    func removeScoreNodes() {
-        score.removeAllChildren()
-    }
+	func removeScoreNodes() {
+		score.removeAllChildren()
+	}
 	func startRecording() {
 		if recording {
 			childNode(withName: "recordButton0")?.removeFromParent()
 			childNode(withName: "recordButton1")?.removeFromParent()
 			childNode(withName: "recordButton2")?.removeFromParent()
 			hasStartedPlaying = false
-            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+			if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
 				print("directoryadded")
-                let path = dir.appendingPathComponent(file)
-                do {
-                    try sequenceString().write(to: path, atomically: false, encoding: String.Encoding.utf8)
-                } catch let err as NSError {
-                    print(err.debugDescription)
-                }
-            }
+				let path = dir.appendingPathComponent(file)
+				do {
+					try sequenceString().write(to: path, atomically: false, encoding: String.Encoding.utf8)
+				} catch let err as NSError {
+					print(err.debugDescription)
+				}
+			}
 		} else {
 			play()
-            clearSequences()
+			clearSequences()
 			let button = TouchNode(imageNamed: "player_record")
 			button.isUserInteractionEnabled = true
 			button.zPosition = 1
@@ -220,17 +224,27 @@ class Play : SKScene {
 				print(text2.components(separatedBy: ":"))
 				if text2.components(separatedBy: ":")[0].components(separatedBy: ",").count != 0 {
 					for i in 0...text2.components(separatedBy: ":")[0].components(separatedBy: ",").count-1 {
-						recordedLeft.append(Float(text2.components(separatedBy: ":")[0].components(separatedBy: ",")[i])!)
+						if let curVal = Float(text2.components(separatedBy: ":")[0].components(separatedBy: ",")[i]) {
+							recordedLeft.append(curVal)
+						}
 					}
 				}
+				print(text2.components(separatedBy: ":")[1].components(separatedBy: ",").count)
+				print(text2.components(separatedBy: ":")[1].components(separatedBy: ","))
 				if text2.components(separatedBy: ":")[1].components(separatedBy: ",").count != 0 {
+					//	if text2.components(separatedBy: ":")[1].components(separatedBy: ",")[0] != "" {
 					for i in 0...text2.components(separatedBy: ":")[1].components(separatedBy: ",").count-1 {
-						recordedMid.append(Float(text2.components(separatedBy: ":")[1].components(separatedBy: ",")[i])!)
+						if let curVal = Float(text2.components(separatedBy: ":")[1].components(separatedBy: ",")[i]) {
+							recordedMid.append(curVal)
+						}
 					}
+					//	}
 				}
 				if text2.components(separatedBy: ":")[2].components(separatedBy: ",").count != 0 {
 					for i in 0...text2.components(separatedBy: ":")[2].components(separatedBy: ",").count-1 {
-						recordedRight.append(Float(text2.components(separatedBy: ":")[2].components(separatedBy: ",")[i])!)
+						if let curVal = Float(text2.components(separatedBy: ":")[2].components(separatedBy: ",")[i]) {
+							recordedRight.append(curVal)
+						}
 					}
 				}
 			} catch let err as NSError {

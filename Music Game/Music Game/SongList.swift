@@ -28,13 +28,15 @@ class SongList: SKScene {
         back.name = "splash"
         addChild(back)
         
+        //albums = ["AnimalNeonTrees", ]
+        
         var testCellArray = [SongCell]()
         for i in 1...6 {
             let testCell = SongCell(imageNamed: "Rectangle")
             testCell.size = CGSize(width: self.size.width, height: self.size.height/6)
             testCell.position = CGPoint(x: self.size.width/2, y: CGFloat(i)*self.size.height/6-self.size.height/12)
             testCell.name = "tableCell\(i-1)"
-            testCell.setup(album: "AnimalNeonTrees", song: "Animal", artist: "Neon Trees")
+            testCell.setup(album: "albumart{\(1)}", song: "Animal", artist: "Neon Trees")
             testCellArray.append(testCell)
             addChild(testCell)
             let testCellButton = TouchNode(imageNamed: "playButton")
