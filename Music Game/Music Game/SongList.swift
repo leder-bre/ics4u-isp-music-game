@@ -45,6 +45,7 @@ class SongList: SKScene {
             testCellButton.isUserInteractionEnabled = true
             testCellButton.zPosition = 2
             testCellButton.name = "gameButton"
+            testCellButton.indexing = i-1
             addChild(testCellButton)
         }
     }

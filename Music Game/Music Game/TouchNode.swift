@@ -12,6 +12,7 @@ import SpriteKit
 class TouchNode : SKSpriteNode {
 	
 	var transistion : SKTransition = SKTransition.fade(withDuration: 1)
+	var indexing = 0
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		let splashScreen : SKScene = GameScene(size: (self.scene!.frame.size))
@@ -35,6 +36,15 @@ class TouchNode : SKSpriteNode {
 			self.scene?.removeAllChildren()
 			break
 		case "gameButton":
+			if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+				let path = dir.appendingPathComponent("songName.txt")
+				let songs = ["Animal", "Feel Good Inc", "Gloe", "Run", "Africa", "Everybody Talks"]
+				do {
+					try songs[indexing].write(to: path, atomically: false, encoding: String.Encoding.utf8)
+				} catch let err as NSError {
+					print(err.debugDescription)
+				}
+			}
 			scene?.scene?.view?.presentScene(playScene)
 			self.scene?.removeAllChildren()
 			break

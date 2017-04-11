@@ -195,31 +195,18 @@ class Play : SKScene {
 		musicPlayer.pause()
 	}
 	func pathSetup() {
-		/*
 		if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
 			let tempFile = "songName.txt"
 			let path = dir.appendingPathComponent(tempFile)
 			do {
 				let songName = try String(contentsOf: path, encoding: String.Encoding.utf8)
-				//file = "\(songName).txt"
-				//url = URL(fileURLWithPath: Bundle.main.path(forResource: "\(songName).mp3", ofType: nil)!)
+				file = "\(songName).txt"
+				url = URL(fileURLWithPath: Bundle.main.path(forResource: "\(songName).mp3", ofType: nil)!)
 				print("songName.txt contents: \(songName)")
 			} catch let err as NSError {
 				print("ERROR: \(err.debugDescription)")
 			}
-		}*/
-		// Save data to file
-		let fileName = "songName"
-		let docDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-		if let fileURL = docDirectory?.appendingPathComponent(fileName).appendingPathExtension("txt") {
-			do {
-				let inString = try String(contentsOf: fileURL)
-				print(inString)
-			} catch {
-				print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
-			}
 		}
-
 	}
 	override func didMove(to view: SKView) {
 		pathSetup()
@@ -245,7 +232,6 @@ class Play : SKScene {
 			print(err.debugDescription)
 		}
 		if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-			print("directoryadded")
 			let path = dir.appendingPathComponent(file)
 			do {
 				let text2 = try String(contentsOf: path, encoding: String.Encoding.utf8)
@@ -260,13 +246,11 @@ class Play : SKScene {
 				print(text2.components(separatedBy: ":")[1].components(separatedBy: ",").count)
 				print(text2.components(separatedBy: ":")[1].components(separatedBy: ","))
 				if text2.components(separatedBy: ":")[1].components(separatedBy: ",").count != 0 {
-					//	if text2.components(separatedBy: ":")[1].components(separatedBy: ",")[0] != "" {
 					for i in 0...text2.components(separatedBy: ":")[1].components(separatedBy: ",").count-1 {
 						if let curVal = Float(text2.components(separatedBy: ":")[1].components(separatedBy: ",")[i]) {
 							recordedMid.append(curVal)
 						}
 					}
-					//	}
 				}
 				if text2.components(separatedBy: ":")[2].components(separatedBy: ",").count != 0 {
 					for i in 0...text2.components(separatedBy: ":")[2].components(separatedBy: ",").count-1 {
