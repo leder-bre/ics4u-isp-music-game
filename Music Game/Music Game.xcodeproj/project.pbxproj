@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C62BDD6C1E5E924400859EF3 /* TouchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62BDD6B1E5E924400859EF3 /* TouchNode.swift */; };
-		C64D17281E95239500C792EE /* Animal.txt in Resources */ = {isa = PBXBuildFile; fileRef = C64D17271E95239500C792EE /* Animal.txt */; };
 		C65E88331E89C1E5008E27C2 /* Animal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C65E88321E89C1E5008E27C2 /* Animal.mp3 */; };
 		C66D303D1E51F77A00DA8BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */; };
 		C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C66D303E1E51F77A00DA8BCC /* GameScene.sks */; };
@@ -35,6 +34,8 @@
 		C6F846341E9D098D00B44F49 /* Feel Good Inc.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */; };
 		C6F846371E9D099100B44F49 /* Run.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6F846351E9D099100B44F49 /* Run.txt */; };
 		C6F846381E9D099100B44F49 /* Everybody Talks.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6F846361E9D099100B44F49 /* Everybody Talks.txt */; };
+		C6F8463A1E9D0C5400B44F49 /* songName.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6F846391E9D0C5400B44F49 /* songName.txt */; };
+		C6F8463C1E9D0CC200B44F49 /* Animal.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6F8463B1E9D0CC200B44F49 /* Animal.txt */; };
 		C6F9296B1E63D619002C4D04 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9296A1E63D619002C4D04 /* Play.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		C62BDD6B1E5E924400859EF3 /* TouchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchNode.swift; sourceTree = "<group>"; usesTabs = 1; };
-		C64D17271E95239500C792EE /* Animal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animal.txt; sourceTree = "<group>"; };
 		C65E88321E89C1E5008E27C2 /* Animal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Animal.mp3; sourceTree = "<group>"; };
 		C66D30391E51F77900DA8BCC /* Music Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Feel Good Inc.txt"; sourceTree = "<group>"; };
 		C6F846351E9D099100B44F49 /* Run.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Run.txt; sourceTree = "<group>"; };
 		C6F846361E9D099100B44F49 /* Everybody Talks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Everybody Talks.txt"; sourceTree = "<group>"; };
+		C6F846391E9D0C5400B44F49 /* songName.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = songName.txt; sourceTree = "<group>"; };
+		C6F8463B1E9D0CC200B44F49 /* Animal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animal.txt; sourceTree = "<group>"; };
 		C6F9296A1E63D619002C4D04 /* Play.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
@@ -139,7 +141,8 @@
 				C6F846351E9D099100B44F49 /* Run.txt */,
 				C6F846361E9D099100B44F49 /* Everybody Talks.txt */,
 				C6F8462F1E9D093000B44F49 /* Africa.txt */,
-				C64D17271E95239500C792EE /* Animal.txt */,
+				C6F8463B1E9D0CC200B44F49 /* Animal.txt */,
+				C6F846391E9D0C5400B44F49 /* songName.txt */,
 			);
 			path = "Music Game";
 			sourceTree = "<group>";
@@ -270,18 +273,19 @@
 				C6F846341E9D098D00B44F49 /* Feel Good Inc.txt in Resources */,
 				C66D30481E51F77A00DA8BCC /* Main.storyboard in Resources */,
 				C65E88331E89C1E5008E27C2 /* Animal.mp3 in Resources */,
+				C6F8463C1E9D0CC200B44F49 /* Animal.txt in Resources */,
 				C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */,
 				C6AA49E01E52C243000FB344 /* IMG_0118.JPG in Resources */,
 				C6F846331E9D098D00B44F49 /* Gloe.txt in Resources */,
 				C66D304A1E51F77A00DA8BCC /* Assets.xcassets in Resources */,
 				C6F846381E9D099100B44F49 /* Everybody Talks.txt in Resources */,
 				C6AA49DC1E52C243000FB344 /* IMG_0114.JPG in Resources */,
+				C6F8463A1E9D0C5400B44F49 /* songName.txt in Resources */,
 				C6AA49DD1E52C243000FB344 /* IMG_0115.JPG in Resources */,
 				C6F846371E9D099100B44F49 /* Run.txt in Resources */,
 				C66D304D1E51F77A00DA8BCC /* LaunchScreen.storyboard in Resources */,
 				C6F846301E9D093000B44F49 /* Africa.txt in Resources */,
 				C66D30411E51F77A00DA8BCC /* Actions.sks in Resources */,
-				C64D17281E95239500C792EE /* Animal.txt in Resources */,
 				C6AA49DE1E52C243000FB344 /* IMG_0116.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

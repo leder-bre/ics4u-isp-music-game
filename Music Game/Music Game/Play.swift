@@ -194,7 +194,21 @@ class Play : SKScene {
 	func pause() {
 		musicPlayer.pause()
 	}
+	func pathSetup() {
+		if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+			print("directoryadded")
+			let path = dir.appendingPathComponent("songName.txt")
+			do {
+				let songName = try String(contentsOf: path, encoding: String.Encoding.utf8)
+				file = "\(songName).txt"
+				url = URL(fileURLWithPath: Bundle.main.path(forResource: "\(songName).mp3", ofType: nil)!)
+			} catch let err as NSError {
+				print(err.debugDescription)
+			}
+		}
+	}
 	override func didMove(to view: SKView) {
+		pathSetup()
 		let background = SKSpriteNode(imageNamed: "gameBackground")
 		background.size = self.frame.size
 		background.position = CGPoint(x: size.width/2, y: size.height/2)
