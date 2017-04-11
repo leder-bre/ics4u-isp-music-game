@@ -136,13 +136,6 @@
 				C66D30491E51F77A00DA8BCC /* Assets.xcassets */,
 				C66D304B1E51F77A00DA8BCC /* LaunchScreen.storyboard */,
 				C66D304E1E51F77A00DA8BCC /* Info.plist */,
-				C6F846311E9D098D00B44F49 /* Gloe.txt */,
-				C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */,
-				C6F846351E9D099100B44F49 /* Run.txt */,
-				C6F846361E9D099100B44F49 /* Everybody Talks.txt */,
-				C6F8462F1E9D093000B44F49 /* Africa.txt */,
-				C6F8463B1E9D0CC200B44F49 /* Animal.txt */,
-				C6F846391E9D0C5400B44F49 /* songName.txt */,
 			);
 			path = "Music Game";
 			sourceTree = "<group>";
@@ -172,6 +165,13 @@
 		C680B64E1E5F703A00CE06EB /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				C6F846311E9D098D00B44F49 /* Gloe.txt */,
+				C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */,
+				C6F846351E9D099100B44F49 /* Run.txt */,
+				C6F846361E9D099100B44F49 /* Everybody Talks.txt */,
+				C6F8462F1E9D093000B44F49 /* Africa.txt */,
+				C6F8463B1E9D0CC200B44F49 /* Animal.txt */,
+				C6F846391E9D0C5400B44F49 /* songName.txt */,
 				C66D30421E51F77A00DA8BCC /* GameScene.swift */,
 				C680B6481E5F18FE00CE06EB /* SongList.swift */,
 				C62BDD6B1E5E924400859EF3 /* TouchNode.swift */,

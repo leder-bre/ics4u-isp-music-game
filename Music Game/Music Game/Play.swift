@@ -29,9 +29,9 @@ class Play : SKScene {
 	var recordedRight = [Float]()
 	var musicPlayer : AVAudioPlayer = AVAudioPlayer()
 	var hasStartedPlaying = false
-	let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Animal.mp3", ofType: nil)!)
+	var url = URL(fileURLWithPath: Bundle.main.path(forResource: "Animal.mp3", ofType: nil)!)
 	var time = 0
-	let file = "Animal.txt"
+	var file = "Animal.txt"
 	/*required init?(coder aDecoder: NSCoder) {
 	
 	fatalError("init(coder:) has not been implemented")
@@ -195,17 +195,31 @@ class Play : SKScene {
 		musicPlayer.pause()
 	}
 	func pathSetup() {
+		/*
 		if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-			print("directoryadded")
-			let path = dir.appendingPathComponent("songName.txt")
+			let tempFile = "songName.txt"
+			let path = dir.appendingPathComponent(tempFile)
 			do {
 				let songName = try String(contentsOf: path, encoding: String.Encoding.utf8)
-				file = "\(songName).txt"
-				url = URL(fileURLWithPath: Bundle.main.path(forResource: "\(songName).mp3", ofType: nil)!)
+				//file = "\(songName).txt"
+				//url = URL(fileURLWithPath: Bundle.main.path(forResource: "\(songName).mp3", ofType: nil)!)
+				print("songName.txt contents: \(songName)")
 			} catch let err as NSError {
-				print(err.debugDescription)
+				print("ERROR: \(err.debugDescription)")
+			}
+		}*/
+		// Save data to file
+		let fileName = "songName"
+		let docDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+		if let fileURL = docDirectory?.appendingPathComponent(fileName).appendingPathExtension("txt") {
+			do {
+				let inString = try String(contentsOf: fileURL)
+				print(inString)
+			} catch {
+				print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
 			}
 		}
+
 	}
 	override func didMove(to view: SKView) {
 		pathSetup()
