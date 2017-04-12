@@ -24,6 +24,11 @@
 		C680B64B1E5F5A8B00CE06EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64A1E5F5A8B00CE06EB /* Settings.swift */; };
 		C680B64D1E5F6D8C00CE06EB /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64C1E5F6D8C00CE06EB /* Splash.swift */; };
 		C680B6501E5F70A100CE06EB /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680B64F1E5F70A100CE06EB /* SongCell.swift */; };
+		C68F02D91E9D75B9009E5E00 /* Feel Good Inc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C68F02D81E9D75B9009E5E00 /* Feel Good Inc.mp3 */; };
+		C68F02DB1E9D76AC009E5E00 /* Gloe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C68F02DA1E9D76AC009E5E00 /* Gloe.mp3 */; };
+		C68F02DD1E9D76BA009E5E00 /* Run.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C68F02DC1E9D76BA009E5E00 /* Run.mp3 */; };
+		C68F02DF1E9D76CC009E5E00 /* Africa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C68F02DE1E9D76CC009E5E00 /* Africa.mp3 */; };
+		C68F02E11E9D76E3009E5E00 /* Everybody Talks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C68F02E01E9D76E3009E5E00 /* Everybody Talks.mp3 */; };
 		C6AA49DC1E52C243000FB344 /* IMG_0114.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D71E52C243000FB344 /* IMG_0114.JPG */; };
 		C6AA49DD1E52C243000FB344 /* IMG_0115.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D81E52C243000FB344 /* IMG_0115.JPG */; };
 		C6AA49DE1E52C243000FB344 /* IMG_0116.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C6AA49D91E52C243000FB344 /* IMG_0116.JPG */; };
@@ -71,6 +76,11 @@
 		C680B64A1E5F5A8B00CE06EB /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C680B64C1E5F6D8C00CE06EB /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		C680B64F1E5F70A100CE06EB /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		C68F02D81E9D75B9009E5E00 /* Feel Good Inc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Feel Good Inc.mp3"; sourceTree = "<group>"; };
+		C68F02DA1E9D76AC009E5E00 /* Gloe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Gloe.mp3; sourceTree = "<group>"; };
+		C68F02DC1E9D76BA009E5E00 /* Run.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Run.mp3; sourceTree = "<group>"; };
+		C68F02DE1E9D76CC009E5E00 /* Africa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Africa.mp3; sourceTree = "<group>"; };
+		C68F02E01E9D76E3009E5E00 /* Everybody Talks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Everybody Talks.mp3"; sourceTree = "<group>"; };
 		C6AA49D71E52C243000FB344 /* IMG_0114.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0114.JPG; sourceTree = "<group>"; };
 		C6AA49D81E52C243000FB344 /* IMG_0115.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0115.JPG; sourceTree = "<group>"; };
 		C6AA49D91E52C243000FB344 /* IMG_0116.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0116.JPG; sourceTree = "<group>"; };
@@ -126,9 +136,21 @@
 		C66D303B1E51F77900DA8BCC /* Music Game */ = {
 			isa = PBXGroup;
 			children = (
+				C6F846311E9D098D00B44F49 /* Gloe.txt */,
+				C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */,
+				C6F846351E9D099100B44F49 /* Run.txt */,
+				C6F846361E9D099100B44F49 /* Everybody Talks.txt */,
+				C6F8462F1E9D093000B44F49 /* Africa.txt */,
+				C6F8463B1E9D0CC200B44F49 /* Animal.txt */,
+				C6F846391E9D0C5400B44F49 /* songName.txt */,
 				C680B64E1E5F703A00CE06EB /* Nodes */,
 				C66D303C1E51F77A00DA8BCC /* AppDelegate.swift */,
 				C65E88321E89C1E5008E27C2 /* Animal.mp3 */,
+				C68F02D81E9D75B9009E5E00 /* Feel Good Inc.mp3 */,
+				C68F02DA1E9D76AC009E5E00 /* Gloe.mp3 */,
+				C68F02DC1E9D76BA009E5E00 /* Run.mp3 */,
+				C68F02DE1E9D76CC009E5E00 /* Africa.mp3 */,
+				C68F02E01E9D76E3009E5E00 /* Everybody Talks.mp3 */,
 				C66D303E1E51F77A00DA8BCC /* GameScene.sks */,
 				C66D30401E51F77A00DA8BCC /* Actions.sks */,
 				C66D30441E51F77A00DA8BCC /* GameViewController.swift */,
@@ -165,13 +187,6 @@
 		C680B64E1E5F703A00CE06EB /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				C6F846311E9D098D00B44F49 /* Gloe.txt */,
-				C6F846321E9D098D00B44F49 /* Feel Good Inc.txt */,
-				C6F846351E9D099100B44F49 /* Run.txt */,
-				C6F846361E9D099100B44F49 /* Everybody Talks.txt */,
-				C6F8462F1E9D093000B44F49 /* Africa.txt */,
-				C6F8463B1E9D0CC200B44F49 /* Animal.txt */,
-				C6F846391E9D0C5400B44F49 /* songName.txt */,
 				C66D30421E51F77A00DA8BCC /* GameScene.swift */,
 				C680B6481E5F18FE00CE06EB /* SongList.swift */,
 				C62BDD6B1E5E924400859EF3 /* TouchNode.swift */,
@@ -275,9 +290,11 @@
 				C65E88331E89C1E5008E27C2 /* Animal.mp3 in Resources */,
 				C6F8463C1E9D0CC200B44F49 /* Animal.txt in Resources */,
 				C66D303F1E51F77A00DA8BCC /* GameScene.sks in Resources */,
+				C68F02DD1E9D76BA009E5E00 /* Run.mp3 in Resources */,
 				C6AA49E01E52C243000FB344 /* IMG_0118.JPG in Resources */,
 				C6F846331E9D098D00B44F49 /* Gloe.txt in Resources */,
 				C66D304A1E51F77A00DA8BCC /* Assets.xcassets in Resources */,
+				C68F02DF1E9D76CC009E5E00 /* Africa.mp3 in Resources */,
 				C6F846381E9D099100B44F49 /* Everybody Talks.txt in Resources */,
 				C6AA49DC1E52C243000FB344 /* IMG_0114.JPG in Resources */,
 				C6F8463A1E9D0C5400B44F49 /* songName.txt in Resources */,
@@ -285,8 +302,11 @@
 				C6F846371E9D099100B44F49 /* Run.txt in Resources */,
 				C66D304D1E51F77A00DA8BCC /* LaunchScreen.storyboard in Resources */,
 				C6F846301E9D093000B44F49 /* Africa.txt in Resources */,
+				C68F02E11E9D76E3009E5E00 /* Everybody Talks.mp3 in Resources */,
 				C66D30411E51F77A00DA8BCC /* Actions.sks in Resources */,
+				C68F02DB1E9D76AC009E5E00 /* Gloe.mp3 in Resources */,
 				C6AA49DE1E52C243000FB344 /* IMG_0116.JPG in Resources */,
+				C68F02D91E9D75B9009E5E00 /* Feel Good Inc.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
